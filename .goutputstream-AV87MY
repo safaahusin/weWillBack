@@ -1,0 +1,16 @@
+import pygame , sys ,music ,thread
+from Tkinter import *
+
+class MainFrame:
+	
+	pygame.init()
+	def __init__(self):
+		self.DIS = pygame.display.set_mode((1600,900),pygame.RESIZABLE,32) 
+		bg = pygame.image.load('safaa.jpg')
+		pygame.display.set_icon(bg)
+		title_arabic=u'\uFEB3\uFEE8\uFECC\uFEEE\uFEA9'.encode('utf8')
+		pygame.display.set_caption(title_arabic)
+		thread.start_new_thread(music.playSong,('Cool Background Music.mp3'))
+		self.DIS = pygame.display.set_mode((1600,900),pygame.RESIZABLE,32)
+		self.DIS.blit(bg,(0,0))
+		
